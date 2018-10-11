@@ -1,0 +1,51 @@
+﻿@model PartialProject.Models.tbl_Users
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SlNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </th>
+        <th></th>
+    </tr>
+
+@*@foreach (var item in Model) {*@
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.SlNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ConfirmPassword)
+        </td>
+        <td>
+            @Html.ActionLink("Form", "Form", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Display", "Display", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Save", "Save", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+@*  }*@
+
+</table>
